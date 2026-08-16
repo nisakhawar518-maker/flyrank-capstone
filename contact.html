@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - FlyRank Capstone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="contact.html" class="logo">FlyRank</a>
+      <nav aria-label="Main navigation">
+        <a href="contact.html" class="nav-link nav-link--active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="contact-hero">
+      <h1>Get in touch</h1>
+      <p class="contact-hero__subtitle">
+        Have a question or want to collaborate? Send us a message and we will get back to you soon.
+      </p>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-form-heading">
+      <div class="contact-card">
+        <h2 id="contact-form-heading" class="visually-hidden">Contact form</h2>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required minlength="2">
+            <span class="field-error" id="name-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@example.com" required>
+            <span class="field-error" id="email-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="general">General inquiry</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="support">Support</option>
+              <option value="feedback">Feedback</option>
+            </select>
+            <span class="field-error" id="subject-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what is on your mind..." required minlength="10"></textarea>
+            <span class="field-error" id="message-error" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="submit-btn">
+            <span class="btn__text">Send message</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <div id="form-success" class="form-success" role="status" hidden>
+          <div class="form-success__icon" aria-hidden="true">&#10003;</div>
+          <h3>Message sent!</h3>
+          <p>Thanks for reaching out. We will reply to your email as soon as possible.</p>
+          <button type="button" class="btn btn--secondary" id="reset-btn">Send another message</button>
+        </div>
+      </div>
+
+      <aside class="contact-info">
+        <h2>Other ways to reach us</h2>
+        <ul class="contact-info__list">
+          <li>
+            <span class="contact-info__label">Email</span>
+            <a href="mailto:hello@flyrank.com">hello@flyrank.com</a>
+          </li>
+          <li>
+            <span class="contact-info__label">Response time</span>
+            <span>Within 1-2 business days</span>
+          </li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 FlyRank Capstone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
